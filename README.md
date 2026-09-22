@@ -31,7 +31,7 @@ The previous AlgoTrade and manual purchase integration with investment tracking 
 ##
 
 ### Features
-
+**First Autonomous Predictive Trading Algorithm (Developed through Ver 0.8)**
 - **Risk & Reward management algorithm** - The implemented strategy calculates the profit/loss of a position relative to the total capital and the overall profit/loss of the capital. The algorithm compares the defined levels of accepted risk and reward relative to the position and capital. On this basis, it makes independent decisions about the possible exit from a particular position or the entire investment.
 - Trading algos:
   - **A purchasing algorithm** based on three indicators calculated using data from the various exchanges. Thanks to the implemented indicator analysis, it makes independent decisions regarding purchases and purchase volumes. The algorithm is executed cyclically according to a set number of hours.
@@ -42,6 +42,11 @@ The previous AlgoTrade and manual purchase integration with investment tracking 
 
 [ x* ] - x is a ingteger
 ##
+
+### Deprecated & Removed Functionalities
+- **Binance REST API Integration** – REST API communication and all trading functionality for the Binance exchange were completely removed from the application.
+
+- **NEAR Blockchain Smart Contract Database** – The original database solution based on NEAR smart contracts was retired and fully migrated to MongoDB.
 
  ![Logo](https://kubakoder.pl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffavicon.5d6e1adf.png&w=48&q=75)
 
