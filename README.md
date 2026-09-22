@@ -57,17 +57,21 @@ read only integration:
 - [ ] ![Static Badge](https://img.shields.io/badge/okx-api-ex?style=plastic&logo=okx&labelColor=%23000000&color=%23ffffff) integration
    
 **in progress:**
-- [ ] New mode for saving/loading status in MongoDB with individual purchase settings for each coin
-- [ ] Implementation of the ability to sell cryptocurrencies based on market price or purchase price (DCA) 
-- [ ] New complex Errors handling system on BackEnd
-- [ ] New FrontEnd extend to use kuCoin purchase features
-- [ ] make API to make purchase on kucoin by client app 
-- [ ] make API to get invest and kucoin data at once by client app
-- [ ] run a selling algorithm with time cycles on kucoin
-- [ ] ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) full features integration. 
-[Thanks to the functionality launched in the KuCoin API, we can create full integration.](https://www.kucoin.com/announcement/hk-kucoin-convert-now-supports-api-trading?lang=en_US) 
+
 
 **done:**
+
+**Ver 0.8 – New Features & Migration of Purchasing Algorithm from Binance to KuCoin – Q2 2026**
+
+* [x] The purchasing and selling algorithm was migrated from Binance to KuCoin due to Binance's withdrawal from European operations following the introduction of MiCA regulations.
+* [x] A selling algorithm with time cycles on KuCoin was implemented.
+* [x] An API was developed to enable purchases on KuCoin via the client application.
+* [x] An API was created to retrieve investment and KuCoin data simultaneously for the client application.
+* [x] ![Static Badge] Full-feature integration was enabled following new capabilities launched in the KuCoin API.[Thanks to the functionality launched in the KuCoin API, we can create full integration.](https://www.kucoin.com/announcement/hk-kucoin-convert-now-supports-api-trading?lang=en_US) 
+* [x] Front-end views were created to support on-demand purchasing and selling, wallet status monitoring, and algorithm performance tracking.
+* [x] A new mode for saving and loading status in MongoDB was implemented, replacing a single global object with individual purchase settings configured separately for each coin.
+* [x] The ability to sell cryptocurrencies was added on the front end, supporting sales based on market price or an adjusted purchase price (DCA). Selling at market price realizes profit or loss without affecting the stored price, whereas selling based on purchase price allows the algorithm to dynamically modify the target price in memory.
+* [x] A new, comprehensive backend error handling system was designed and implemented to manage all exceptions originating from various external APIs and the MongoDB database.
 
 ---
 
