@@ -54,6 +54,8 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 - **on Ver 0.4 NEAR Blockchain Smart Contract Database** – The original database solution based on NEAR smart contracts was retired and fully migrated to MongoDB.
 
+##
+
 ![Logo](https://kubakoder.pl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffavicon.5d6e1adf.png&w=48&q=75)
 
 ### 👨🏻‍💻 Author: [@SerafinPL](https://www.github.com/serafinpl)
@@ -95,7 +97,7 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 - [x] A selling algorithm with time cycles on ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) was implemented.
 - [x] An API was developed to enable purchases on ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) via the client application.
 - [x] An API was created to retrieve investment and ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) data simultaneously for the client application.
-- [x] ![Static Badge] Full-feature integration was enabled following new capabilities launched in the ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) API.[Thanks to the functionality launched in the KuCoin API, we can create full integration.](https://www.kucoin.com/announcement/hk-kucoin-convert-now-supports-api-trading?lang=en_US)
+- [x] Full-feature integration was enabled following new capabilities launched in the ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) API.[Thanks to the functionality launched in the KuCoin API, we can create full integration.](https://www.kucoin.com/announcement/hk-kucoin-convert-now-supports-api-trading?lang=en_US)
 - [x] Front-end views were created to support on-demand purchasing and selling, wallet status monitoring, and algorithm performance tracking.
 - [x] A new mode for saving and loading status in MongoDB was implemented, replacing a single global object with individual purchase settings configured separately for each coin.
 - [x] The ability to sell cryptocurrencies was added on the front end, supporting sales based on market price or an adjusted purchase price (DCA). Selling at market price realizes profit or loss without affecting the stored price, whereas selling based on purchase price allows the algorithm to dynamically modify the target price in memory.
