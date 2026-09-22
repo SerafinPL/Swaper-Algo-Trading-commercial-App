@@ -112,11 +112,8 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 - [x] The core strategy framework, algorithm specifications, and data structures for a new non-predictive "Clever Grid" algorithm—combining Dollar Cost Averaging (DCA) and Grid Trading techniques—were defined and designed.
 - [x] A completely new indicator-based predictive algorithm was developed to replace the legacy system on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000). Futures trading was integrated to generate profits from both long and short positions during bullish and bearish trends. Additionally, a risk-reward system was implemented within this solution to automatically place orders with corresponding take-profit and stop-loss levels.
-
 - [x] The legacy algorithm was disabled on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000), and all ![Static Badge](https://img.shields.io/badge/binance-api-ex?style=plastic&logo=binance&logoColor=%23F0B90B&labelColor=%23000&color=%23F0B90B) exchange support functionality was completely removed from the application.
-
 - [x] CoinGecko API integration was implemented to fetch indicators for the new decision-making algorithm from the broader cryptocurrency market, eliminating reliance on data from a single exchange.
-
 - [x] The legacy algorithm's trading execution ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) was refactored from Convert services to Spot trading to reduce transaction fees.
 
 ---
