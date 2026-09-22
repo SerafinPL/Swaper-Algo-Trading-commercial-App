@@ -34,6 +34,15 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 ### Features
 
+**Clever Grid Algorithm (In Progress – Ver 0.10)**
+- **Non-Predictive Hybrid Framework:** Combines Dollar Cost Averaging (DCA) and Grid Trading methodologies into a non-predictive execution model designed for range-bound and volatile markets.
+- **System Architecture & Data Structures:** Designed the core strategy framework, execution specifications, and persistent data structures required to manage dynamic grid levels and DCA scaling.
+- **User-Tailored Strategy Customization:** Engineered to be fully configurable according to individual trader preferences, offering granular control over strategy execution:
+  - **Flexible Order Sizing:** Ability to customize buy and sell order volumes for each individual grid level.
+  - **Adjustable Level Spacing:** Variable percentage intervals between individual grid thresholds.
+  - **Multi-Asset Deployment:** Support for configuring and deploying tailored strategy parameters across various cryptocurrencies.
+  - **Directional Execution Control:** Ability to independently enable or disable buying or selling operations for each specific cryptocurrency.
+
 **Second-Generation Bidirectional Predictive Futures Algorithm with Automated RRM (Introduced in Ver 0.9)**
 - **Automated Risk & Reward Management** - Upgraded from the legacy cyclic assessment, the new system calculates and enforces risk-reward ratios at the exact moment of execution. It automatically places trading orders with precisely calculated, corresponding Take-Profit (TP) and Stop-Loss (SL) levels directly on the exchange.
 
@@ -90,12 +99,18 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 **Ver 0.10 – Clever Grid Algorithm – Q4 2026 (In Progress)**
 
-- [ ] Developing a new non-predictive algorithm, tentatively named "Clever Grid," that combines Dollar Cost Averaging (DCA) and Grid Trading techniques.
+- [ ] Implementation of the core execution engine combining Dollar Cost Averaging (DCA) and Grid Trading methodologies for range-bound and volatile markets.
+- [ ] Development of a user-tailored configuration module providing granular control over strategy execution parameters.
+- [ ] Integration of flexible order sizing, enabling the customization of buy and sell volumes for each individual grid level.
+- [ ] Implementation of adjustable level spacing to support variable percentage intervals between grid thresholds.
+- [ ] Configuration of multi-asset deployment capabilities, allowing independent strategy parameters to be established across various cryptocurrencies.
+- [ ] Integration of directional execution controls, allowing buying or selling operations to be independently enabled or disabled for each specific asset.
 
 **done:**
 
 **Ver 0.9 – Spot Trading & Kraken Futures Predictive Algorithm – Q3 2026**
 
+- [x] The core strategy framework, algorithm specifications, and data structures for a new non-predictive "Clever Grid" algorithm—combining Dollar Cost Averaging (DCA) and Grid Trading techniques—were defined and designed.
 - [x] A completely new indicator-based predictive algorithm was developed to replace the legacy system on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000). Futures trading was integrated to generate profits from both long and short positions during bullish and bearish trends. Additionally, a risk-reward system was implemented within this solution to automatically place orders with corresponding take-profit and stop-loss levels.
 
 - [x] The legacy algorithm was disabled on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000), and all ![Static Badge](https://img.shields.io/badge/binance-api-ex?style=plastic&logo=binance&logoColor=%23F0B90B&labelColor=%23000&color=%23F0B90B) exchange support functionality was completely removed from the application.
