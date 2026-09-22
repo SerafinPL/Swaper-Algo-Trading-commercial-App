@@ -20,11 +20,13 @@ Algo trading bot with Risk-reward management. Swaping crypto on various exchange
 ### 🏦 Exchanges: 
 
 algoTrade & manual purchase with invest tracking + RRM integration:
-![Static Badge](https://img.shields.io/badge/binance-api-ex?style=plastic&logo=binance&logoColor=%23F0B90B&labelColor=%23000&color=%23F0B90B)
+
+![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) 
+
 ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000)
 
-read only integration:
-![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) 
+The previous AlgoTrade and manual purchase integration with investment tracking and RRM is currently unsupported:
+![Static Badge](https://img.shields.io/badge/binance-api-ex?style=plastic&logo=binance&logoColor=%23F0B90B&labelColor=%23000&color=%23F0B90B)
 
 ##
 
@@ -50,33 +52,39 @@ read only integration:
 
 ### Roadmap
 
-**to do:**
+**on plan to do:**
 
 - [ ] remake invest data structure and workflow to work with more than one user
 - [ ] ![Static Badge](https://img.shields.io/badge/okx-api-ex?style=plastic&logo=okx&labelColor=%23000000&color=%23ffffff) integration
    
 **in progress:**
 
+**Ver 0.10 – Clever Grid Algorithm – Q4 2026 (In Progress)**
 
+[ ] Developing a new non-predictive algorithm, tentatively named "Clever Grid," that combines Dollar Cost Averaging (DCA) and Grid Trading techniques.
 
 **done:**
 
 **Ver 0.9 – Spot Trading & Kraken Futures Predictive Algorithm – Q3 2026**
 
-* [x] The algorithm's trading execution was refactored from Convert services to Spot trading to reduce transaction fees.
-* [x] A new indicator-based predictive algorithm was developed, and Kraken Futures trading was integrated to generate profits from both long and short positions during bullish and bearish trends. Additionally, a risk-reward system was implemented within this solution to automatically place orders with corresponding take-profit and stop-loss levels.
-* [x] Binance exchange support functionality was completely removed from the application.
-* [x] CoinGecko API integration was implemented to fetch indicators for the decision-making algorithm from the broader cryptocurrency market rather than relying on data from a single exchange.
+
+[x] A completely new indicator-based predictive algorithm was developed to replace the legacy system on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000).  Futures trading was integrated to generate profits from both long and short positions during bullish and bearish trends. Additionally, a risk-reward system was implemented within this solution to automatically place orders with corresponding take-profit and stop-loss levels.
+
+[x] The legacy algorithm was disabled on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000), and all Binance exchange support functionality was completely removed from the application.
+
+[x] CoinGecko API integration was implemented to fetch indicators for the new decision-making algorithm from the broader cryptocurrency market, eliminating reliance on data from a single exchange.
+
+[x] The legacy algorithm's trading execution ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  was refactored from Convert services to Spot trading to reduce transaction fees.
 
 ---
 
 **Ver 0.8 – New Features & Migration of Purchasing Algorithm from Binance to KuCoin – Q2 2026**
 
-* [x] The purchasing and selling algorithm was migrated from Binance to KuCoin due to Binance's withdrawal from European operations following the introduction of MiCA regulations.
-* [x] A selling algorithm with time cycles on KuCoin was implemented.
-* [x] An API was developed to enable purchases on KuCoin via the client application.
-* [x] An API was created to retrieve investment and KuCoin data simultaneously for the client application.
-* [x] ![Static Badge] Full-feature integration was enabled following new capabilities launched in the KuCoin API.[Thanks to the functionality launched in the KuCoin API, we can create full integration.](https://www.kucoin.com/announcement/hk-kucoin-convert-now-supports-api-trading?lang=en_US) 
+* [x] The purchasing and selling algorithm was migrated from Binance to ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  due to Binance's withdrawal from European operations following the introduction of MiCA regulations.
+* [x] A selling algorithm with time cycles on ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  was implemented.
+* [x] An API was developed to enable purchases on ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  via the client application.
+* [x] An API was created to retrieve investment and ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  data simultaneously for the client application.
+* [x] ![Static Badge] Full-feature integration was enabled following new capabilities launched in the ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  API.[Thanks to the functionality launched in the KuCoin API, we can create full integration.](https://www.kucoin.com/announcement/hk-kucoin-convert-now-supports-api-trading?lang=en_US) 
 * [x] Front-end views were created to support on-demand purchasing and selling, wallet status monitoring, and algorithm performance tracking.
 * [x] A new mode for saving and loading status in MongoDB was implemented, replacing a single global object with individual purchase settings configured separately for each coin.
 * [x] The ability to sell cryptocurrencies was added on the front end, supporting sales based on market price or an adjusted purchase price (DCA). Selling at market price realizes profit or loss without affecting the stored price, whereas selling based on purchase price allows the algorithm to dynamically modify the target price in memory.
@@ -114,12 +122,12 @@ read only integration:
 * [x] Investment data was migrated from the Near Protocol to MongoDB.
 * [x] Integration with a new database provider (MongoDB 6.17.0) was completed.
 * [x] Complex assessment and indicator ranking algorithms were modified, and Price Trend was added to the calculations based on testing feedback.
-* [x] Price Trend was calculated using candlestick (kline) data from Kraken and Binance.
+* [x] Price Trend was calculated using candlestick (kline) data from ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000) and Binance.
 * [x] Testing with live market data and backtesting of complex assessment and indicator ranking functions were conducted.
 * [x] An API was developed to provide candlestick data along with calculated indicators and rankings from all three exchanges to the client application.
 * [x] A complex assessment system based on three indicators was developed and implemented.
 * [x] A ranking algorithm for “Indicator 3” calculations was developed and implemented.
-* [x] “Indicator 3” was calculated using candlestick data from Kraken and Binance.
+* [x] “Indicator 3” was calculated using candlestick data from ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000) and Binance.
 * [x] Two indicators were calculated using candlestick data from Binance.
 
 ---
@@ -131,22 +139,22 @@ read only integration:
 * [x] Binance was added to the APIs.
 * [x] Binance API integration was completed.
 * [x] Ranking algorithms for “Indicator 2” and “Indicator 1” calculations were developed and implemented.
-* [x] “Indicator 2” was calculated using candlestick data from Kraken.
-* [x] “Indicator 1” was calculated using candlestick data from Kraken.
+* [x] “Indicator 2” was calculated using candlestick data from ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000).
+* [x] “Indicator 1” was calculated using candlestick data from ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000).
 * [x] The API was expanded to enable purchases on more than one exchange through the client application.
 
 ---
 
 **Ver 0.2 – Independent Selling App – 2024**
 
-* [x] A selling algorithm with time cycles on Kraken was implemented.
+* [x] A selling algorithm with time cycles on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000) was implemented.
 * [x] A selling algorithm was developed and implemented.
 * [x] The API was expanded to allow the client application to get and set investment data across multiple exchanges.
 * [x] The investment data structure was redesigned to support multiple exchanges.
-* [x] An API was created to retrieve investment and KuCoin data simultaneously for the client application.
-* [x] Read-only integration with the KuCoin API was completed.
-* [x] An API was developed to enable purchases on Kraken via the client application.
-* [x] An API was created to retrieve investment and Kraken data simultaneously for the client application.
+* [x] An API was created to retrieve investment and ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  data simultaneously for the client application.
+* [x] Read-only integration with the ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D)  API was completed.
+* [x] An API was developed to enable purchases on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000) via the client application.
+* [x] An API was created to retrieve investment and ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000) data simultaneously for the client application.
 * [x] An API was developed to allow the client application to get and set investment data.
 
 ---
@@ -154,5 +162,5 @@ read only integration:
 **Ver 0.1 – Initial Application Setup – 2024**
 
 * [x] Near smart contract integration was implemented as the database solution.
-* [x] Kraken API integration was completed.
+* [x] ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000) API integration was completed.
 * [x] The initial project configuration was set up using Node.js (v22.20.0), TypeScript (v5.8.3), and dotenv (v16.5.0).
