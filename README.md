@@ -34,7 +34,7 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 ### Features
 
-**Second-Generation Bidirectional Predictive Futures Algorithm with Automated RRM (Developed through Ver 0.9)**
+**Second-Generation Bidirectional Predictive Futures Algorithm with Automated RRM (Introduced in Ver 0.9)**
 - **Automated Risk & Reward Management**  - Upgraded from the legacy cyclic assessment, the new system calculates and enforces risk-reward ratios at the exact moment of execution. It automatically places trading orders with precisely calculated, corresponding Take-Profit (TP) and Stop-Loss (SL) levels directly on the exchange.
 
 - Trading Execution & Market Analysis:
@@ -45,17 +45,21 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 **First Autonomous Predictive Trading Algorithm (Developed through Ver 0.8)**
 
-- **Risk & Reward management algorithm** - The implemented strategy calculates the profit/loss of a position relative to the total capital and the overall profit/loss of the capital. The algorithm compares the defined levels of accepted risk and reward relative to the position and capital. On this basis, it makes independent decisions about the possible exit from a particular position or the entire investment.
+- **Risk & Reward Management** - Calculates the profit/loss of a position relative to the total capital and the overall portfolio. The algorithm compares the defined levels of accepted risk and reward to make independent decisions about exiting a particular position or the entire investment.
 - Trading algos:
-  - **A purchasing algorithm** based on three indicators calculated using data from the various exchanges. Thanks to the implemented indicator analysis, it makes independent decisions regarding purchases and purchase volumes. The algorithm is executed cyclically according to a set number of hours.
-  - **The selling algorithm** is based on a comparison of investment values taken from the database and current market data. The algorithm analyzes the current value of individual investments, and those that generate a profit of x*% or higher are processed further. For selected positions, the algorithm saves the “highest profit” in the database. In subsequent cycles, it sells positions after reaching x*% of the ‘highest profit’ value or raises the ‘highest profit’ value. The algorithm is executed cyclically according to a set number of minutes. It works similarly to a raising stop-loss order.
-- REST API communication with: Binance, Kraken, KuCoin.
-- API to communicate with client app.
-- MongoDB communication
+  - **Purchasing Algorithm** Based on three market indicators calculated using cross-exchange data. It makes independent decisions regarding asset selection and purchase volumes, executing cyclically based on a set hourly schedule.
+  - **Selling Algorithm (Trailing Stop-Loss)** Compares database investment values with current market data. Positions generating a profit of x*% or higher are tracked, and the algorithm records the “highest profit.” In subsequent minute-by-minute cycles, it either sells the position if it drops to x*% of the ‘highest profit’ value or raises the peak marker.
 
-[ x* ] - x is a ingteger
+(Note: [ x ] - x is an integer)*
 
-##
+## Technical Stack & Architecture
+
+- **Backend Engine & Trading Core:** Built on **Node.js** (TypeScript), responsible for running the autonomous trading algorithms, managing real-time market connections, and executing automated RRM logic.
+- **Front-End Client Application:** Built with **Next.js** (HeroUI), providing a modern user interface for real-time portfolio tracking, algorithm control, and manual order execution.
+- **Authentication & Identity:** Managed via **NextAuth** with **OAuth integration** on the Next.js front-end for secure user login and session management.
+- **Database Architecture:** Centralized data persistence, user state, and algorithm history handled through **MongoDB**.
+- **Exchange & Market APIs:** Extensive REST API integration for trading and market data ingestion across **Binance**, **Kraken**, **KuCoin**, and **CoinGecko**.
+- **Client Interface API:** Custom APIs exposed by the Node.js backend to seamlessly deliver live data, algorithm metrics, and portfolio states to the Next.js client.
 
 ### Deprecated & Removed Functionalities
 
