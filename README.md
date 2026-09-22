@@ -52,14 +52,23 @@ read only integration:
 
 **to do:**
 
-- [ ] remake invest data structure to work with more than one user
-- [ ] remake Risk & Reward management data structure to work with more than one user
+- [ ] remake invest data structure and workflow to work with more than one user
 - [ ] ![Static Badge](https://img.shields.io/badge/okx-api-ex?style=plastic&logo=okx&labelColor=%23000000&color=%23ffffff) integration
    
 **in progress:**
 
 
+
 **done:**
+
+**Ver 0.9 – Spot Trading & Kraken Futures Predictive Algorithm – Q3 2026**
+
+* [x] The algorithm's trading execution was refactored from Convert services to Spot trading to reduce transaction fees.
+* [x] A new indicator-based predictive algorithm was developed, and Kraken Futures trading was integrated to generate profits from both long and short positions during bullish and bearish trends. Additionally, a risk-reward system was implemented within this solution to automatically place orders with corresponding take-profit and stop-loss levels.
+* [x] Binance exchange support functionality was completely removed from the application.
+* [x] CoinGecko API integration was implemented to fetch indicators for the decision-making algorithm from the broader cryptocurrency market rather than relying on data from a single exchange.
+
+---
 
 **Ver 0.8 – New Features & Migration of Purchasing Algorithm from Binance to KuCoin – Q2 2026**
 
