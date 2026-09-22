@@ -34,6 +34,15 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 ### Features
 
+**Second-Generation Bidirectional Predictive Futures Algorithm with Automated RRM (Developed through Ver 0.9)**
+- **Automated Risk & Reward Management**  - Upgraded from the legacy cyclic assessment, the new system calculates and enforces risk-reward ratios at the exact moment of execution. It automatically places trading orders with precisely calculated, corresponding Take-Profit (TP) and Stop-Loss (SL) levels directly on the exchange.
+
+- Trading Execution & Market Analysis:
+
+- **Indicator-Based Predictive Engine**  - Replaces the single-exchange data reliance by integrating the CoinGecko API. The decision-making algorithm fetches and analyzes indicators from the broader global cryptocurrency market to determine optimal market entries.
+
+- **Bidirectional Futures Trading**  - Transitions from standard spot accumulation to a Futures trading model on Kraken. The algorithm is designed to capitalize on overall market volatility by opening Long and Short positions, enabling profit generation during both bullish and bearish market trends.
+
 **First Autonomous Predictive Trading Algorithm (Developed through Ver 0.8)**
 
 - **Risk & Reward management algorithm** - The implemented strategy calculates the profit/loss of a position relative to the total capital and the overall profit/loss of the capital. The algorithm compares the defined levels of accepted risk and reward relative to the position and capital. On this basis, it makes independent decisions about the possible exit from a particular position or the entire investment.
