@@ -39,9 +39,9 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 - Trading Execution & Market Analysis:
 
-- **Indicator-Based Predictive Engine**  - Replaces the single-exchange data reliance by integrating the CoinGecko API. The decision-making algorithm fetches and analyzes indicators from the broader global cryptocurrency market to determine optimal market entries.
+  - **Indicator-Based Predictive Engine**  - Replaces the single-exchange data reliance by integrating the CoinGecko API. The decision-making algorithm fetches and analyzes indicators from the broader global cryptocurrency market to determine optimal market entries.
 
-- **Bidirectional Futures Trading**  - Transitions from standard spot accumulation to a Futures trading model on Kraken. The algorithm is designed to capitalize on overall market volatility by opening Long and Short positions, enabling profit generation during both bullish and bearish market trends.
+  - **Bidirectional Futures Trading**  - Transitions from standard spot accumulation to a Futures trading model on Kraken. The algorithm is designed to capitalize on overall market volatility by opening Long and Short positions, enabling profit generation during both bullish and bearish market trends.
 
 **First Autonomous Predictive Trading Algorithm (Developed through Ver 0.8)**
 
@@ -52,14 +52,16 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 (Note: [ x ] - x is an integer)*
 
-## Technical Stack & Architecture
+### Technical Stack & Architecture
 
 - **Backend Engine & Trading Core:** Built on **Node.js** (TypeScript), responsible for running the autonomous trading algorithms, managing real-time market connections, and executing automated RRM logic.
 - **Front-End Client Application:** Built with **Next.js** (HeroUI), providing a modern user interface for real-time portfolio tracking, algorithm control, and manual order execution.
 - **Authentication & Identity:** Managed via **NextAuth** with **OAuth integration** on the Next.js front-end for secure user login and session management.
 - **Database Architecture:** Centralized data persistence, user state, and algorithm history handled through **MongoDB**.
-- **Exchange & Market APIs:** Extensive REST API integration for trading and market data ingestion across **Binance**, **Kraken**, **KuCoin**, and **CoinGecko**.
+- **Exchange & Market APIs:** Extensive REST API integration for trading and market data ingestion across **Kraken**, **KuCoin**, and **CoinGecko**.
 - **Client Interface API:** Custom APIs exposed by the Node.js backend to seamlessly deliver live data, algorithm metrics, and portfolio states to the Next.js client.
+
+##
 
 ### Deprecated & Removed Functionalities
 
@@ -88,19 +90,19 @@ ver 0.8 - Autonomous Predictive Trading Algorithm is currently unsupported on
 
 **Ver 0.10 – Clever Grid Algorithm – Q4 2026 (In Progress)**
 
-[ ] Developing a new non-predictive algorithm, tentatively named "Clever Grid," that combines Dollar Cost Averaging (DCA) and Grid Trading techniques.
+- [ ] Developing a new non-predictive algorithm, tentatively named "Clever Grid," that combines Dollar Cost Averaging (DCA) and Grid Trading techniques.
 
 **done:**
 
 **Ver 0.9 – Spot Trading & Kraken Futures Predictive Algorithm – Q3 2026**
 
-[x] A completely new indicator-based predictive algorithm was developed to replace the legacy system on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000). Futures trading was integrated to generate profits from both long and short positions during bullish and bearish trends. Additionally, a risk-reward system was implemented within this solution to automatically place orders with corresponding take-profit and stop-loss levels.
+- [x] A completely new indicator-based predictive algorithm was developed to replace the legacy system on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000). Futures trading was integrated to generate profits from both long and short positions during bullish and bearish trends. Additionally, a risk-reward system was implemented within this solution to automatically place orders with corresponding take-profit and stop-loss levels.
 
-[x] The legacy algorithm was disabled on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000), and all ![Static Badge](https://img.shields.io/badge/binance-api-ex?style=plastic&logo=binance&logoColor=%23F0B90B&labelColor=%23000&color=%23F0B90B) exchange support functionality was completely removed from the application.
+- [x] The legacy algorithm was disabled on ![Static Badge](https://img.shields.io/badge/kraken-api-ex?style=plastic&labelColor=%235841D8&color=%23000), and all ![Static Badge](https://img.shields.io/badge/binance-api-ex?style=plastic&logo=binance&logoColor=%23F0B90B&labelColor=%23000&color=%23F0B90B) exchange support functionality was completely removed from the application.
 
-[x] CoinGecko API integration was implemented to fetch indicators for the new decision-making algorithm from the broader cryptocurrency market, eliminating reliance on data from a single exchange.
+- [x] CoinGecko API integration was implemented to fetch indicators for the new decision-making algorithm from the broader cryptocurrency market, eliminating reliance on data from a single exchange.
 
-[x] The legacy algorithm's trading execution ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) was refactored from Convert services to Spot trading to reduce transaction fees.
+- [x] The legacy algorithm's trading execution ![Static Badge](https://img.shields.io/badge/kucoin-api-ex?style=plastic&logo=kucoin&labelColor=%23000&color=%2301BC8D) was refactored from Convert services to Spot trading to reduce transaction fees.
 
 ---
 
